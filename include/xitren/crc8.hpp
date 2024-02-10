@@ -26,4 +26,4 @@ crc8(InputIterator begin, InputIterator end)
     return crc;
 }
 
-}    // namespace xitren::crc8
+}    // namespace xitren::crc

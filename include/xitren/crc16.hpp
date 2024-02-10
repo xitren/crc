@@ -35,8 +35,8 @@ public:
         constexpr auto crc16_tbl = crc16::prepare_table(polynome);
         value_type     crc_mb{0xFFFF};
         for (std::input_iterator auto byte = begin; byte < end; byte++)
-            crc_mb = (crc_mb.get() >> 8) ^ crc16_tbl[(crc_mb.get() & 0xFF) ^ (*byte)];
+            crc_mb = (crc_mb >> 8) ^ crc16_tbl[(crc_mb & 0xFF) ^ (*byte)];
         return crc_mb;
     }
 };
-}    // namespace xitren::crc16
+}    // namespace xitren::crc

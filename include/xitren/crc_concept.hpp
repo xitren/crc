@@ -17,4 +17,4 @@ concept crc_concept = requires {
 template <typename T>
 concept crc_iterator = std::input_iterator<T>;
 
-}    // namespace xitren::crc16
+}    // namespace xitren::crc
