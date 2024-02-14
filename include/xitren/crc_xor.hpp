@@ -19,11 +19,12 @@ public:
     using value_type = std::uint8_t;
 
     /*!
-    Calculate crc on data by input iterator
-    \param[in] begin Begin iterator of byte data
-    \param[in] end End iterator of byte data
-    \return crc value
-    */
+     * \brief Calculate crc on data by input iterator
+     *
+     * \param[in] begin Begin iterator of byte data
+     * \param[in] end End iterator of byte data
+     * \return crc value
+     */
     template <crc_iterator InputIterator>
     static constexpr value_type
     calculate(InputIterator begin, InputIterator end)
@@ -36,9 +37,9 @@ public:
     }
 
     /*!
-    Calculate crc on data array
-    \param[in] data Array
-    \return crc value
+    \brief Calculates the CRC value of an array of bytes using the XOR method.
+    \param[in] data The array of bytes to calculate the CRC value for.
+    \return crc The CRC value of the array of bytes.
     */
     template <std::size_t Size>
     static consteval value_type
