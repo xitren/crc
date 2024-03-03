@@ -14,6 +14,10 @@ project(${LIBRARY_NAME}
 	LANGUAGES CXX
 )
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+target_compile_options(${LIBRARY_NAME} INTERFACE -std=c++20 -Wc++20-compat)
+
 add_library(${LIBRARY_NAME} INTERFACE)
 add_library(${GLOBAL_NAMESPACE}::${LIBRARY_NAME} ALIAS ${LIBRARY_NAME})
 
